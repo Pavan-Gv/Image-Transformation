@@ -38,7 +38,7 @@ i)Image Translation
 import numpy as np
 import cv2
 import matplotlib.pyplot as plt
-inputImage=cv2.imread("gray.jpg")
+inputImage=cv2.imread("dog.jpg")
 inputImage=cv2.cvtColor(inputImage, cv2.COLOR_BGR2RGB)
 plt.axis("off")
 plt.imshow(inputImage)
@@ -56,7 +56,7 @@ ii) Image Scaling
 import numpy as np
 import cv2
 import matplotlib.pyplot as plt
-inputImage=cv2.imread("gray.jpg")
+inputImage=cv2.imread("dog.jpg")
 inputImage=cv2.cvtColor(inputImage, cv2.COLOR_BGR2RGB)
 plt.axis("off")
 plt.imshow(inputImage)
@@ -74,7 +74,7 @@ iii)Image shearing
 import numpy as np
 import cv2
 import matplotlib.pyplot as plt
-inputImage=cv2.imread("gray.jpg")
+inputImage=cv2.imread("dog.jpg")
 inputImage=cv2.cvtColor(inputImage, cv2.COLOR_BGR2RGB)
 plt.axis("off")
 plt.imshow(inputImage)
@@ -100,7 +100,7 @@ iv)Image Reflection
 import numpy as np
 import cv2
 import matplotlib.pyplot as plt
-inputImage=cv2.imread("gray.jpg")
+inputImage=cv2.imread("dog.jpg")
 inputImage=cv2.cvtColor(inputImage, cv2.COLOR_BGR2RGB)
 plt.axis("off")
 plt.imshow(inputImage)
@@ -120,8 +120,12 @@ plt.show()
 
 v)Image Rotation
 
+import cv2
+import numpy as np
+import matplotlib.pyplot as plt
 angle=np.radians(45)
-inputImage=cv2.imread("gray.jpg")
+inputImage=cv2.imread("dog.jpg")
+rows, cols, dim = inputImage.shape
 M=np.float32([[np.cos(angle),-(np.sin(angle)),0],
                [np.sin(angle),np.cos(angle),0],
                [0,0,1]])
@@ -132,9 +136,11 @@ plt.show()
 
 
 vi)Image Cropping
-
+import cv2
+import numpy as np
+import matplotlib.pyplot as plt
 angle=np.radians(45)
-inputImage=cv2.imread("gray.jpg")
+inputImage=cv2.imread("dog.jpg")
 CroppedImage= inputImage[20:150, 60:230]
 plt.axis('off')
 plt.imshow(CroppedImage)
